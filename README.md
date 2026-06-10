@@ -15,7 +15,7 @@
 
 1. Clone repo ini
 ```bash
-   git clone https://github.com/username/airdrop-daily.git
+   git clone https://github.com/Dinaalanaa/ListProject.git
 ```
 2. Buka `index.html` langsung di browser — tidak perlu install apapun
 
