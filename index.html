@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Airdrop Daily</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+  <div class="navbar">
+    <h3 class="logo">Airdrop Daily</h3>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="menu" id="navMenu">
+      <a href="#dashboard" id="btn1">Dashboard</a>
+      <a href="#nft" id="btn1">NFT</a>
+      <a href="#galxe" id="btn2">GALXE</a>
+      <a href="#guild" id="btn2">Guild</a>
+      <a href="#waitlist" id="btn2">Waitlist</a>
+      <a href="#random" id="btn3">Random</a>
+      <div class="menu-divider"></div>
+      <button class="menu-btn-export" id="exportBtn" title="Export data ke JSON">
+        <i data-feather="download"></i> Export
+      </button>
+      <label class="menu-btn-import" title="Import data dari JSON">
+        <i data-feather="upload"></i> Import
+        <input type="file" id="importFile" accept=".json" style="display:none">
+      </label>
+    </div>
+  </div>
+
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <p class="day"></p>
+
+  <!-- Content -->
+  <section class="dashboard page active" id="dashboard">
+    <div class="card">
+      <h2>Project Crpto</h2>
+      <div class="card-actions">
+        <button id="start">Start Daily</button>
+        <button id="Add">Add Airdrop</button>
+        <a href="https://cryptorank.io/drophunting" id="rank" target="_blank">Open CryptoRank</a>
+      </div>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Project</th><th>Link</th><th>Twitter</th><th>Discord</th>
+              <th>Status</th><th>Join Date</th><th>Stage</th><th>Task</th><th>Last Activity</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="galxe page" id="galxe">
+    <div class="card">
+      <h2>Galxe Project</h2>
+      <div class="card-actions"><button id="galxeAdd">Add Airdrop</button></div>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Project</th><th>Link</th><th>Twitter</th><th>Discord</th>
+              <th>Status</th><th>Join Date</th><th>Stage</th><th>Task</th><th>Last Activity</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="guild page" id="guild">
+    <div class="card">
+      <h2>Guild Project</h2>
+      <div class="card-actions"><button id="guildAdd">Add Airdrop</button></div>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Project</th><th>Link</th><th>Twitter</th><th>Discord</th>
+              <th>Status</th><th>Join Date</th><th>Stage</th><th>Task</th><th>Last Activity</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="waitlist page" id="waitlist">
+    <div class="card">
+      <h2>Waitlist Project</h2>
+      <div class="card-actions"><button id="waitlistAdd">Add Airdrop</button></div>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Project</th><th>Link</th><th>Twitter</th><th>Discord</th>
+              <th>Status</th><th>Join Date</th><th>Stage</th><th>Task</th><th>Last Activity</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="nft page" id="nft">
+    <div class="card">
+      <h2>NFT Project</h2>
+      <div class="card-actions"><button id="randomNad">Add Airdrop</button></div>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Project</th><th>Link</th><th>Twitter</th><th>Discord</th>
+              <th>Status</th><th>Join Date</th><th>Stage</th><th>Task</th><th>Last Activity</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="random page" id="random">
+    <div class="card">
+      <h2>Random Airdrop</h2>
+      <div class="card-actions"><button id="randomAdd">Add Airdrop</button></div>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Project</th><th>Link</th><th>Twitter</th><th>Discord</th>
+              <th>Status</th><th>Distribusi Date</th><th>Stage</th><th>Task</th><th>Last Activity</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <div class="form-overlay" id="formOverlay"></div>
+  <div class="form" id="addForm">
+    <h1>Tambah Airdrop</h1>
+    <input type="text" id="1" placeholder="Project">
+    <input type="text" id="2" placeholder="Link image (dari X/Twitter)">
+    <input type="text" id="3" placeholder="Link">
+    <input type="text" id="4" placeholder="Twitter">
+    <input type="text" id="5" placeholder="Discord">
+    <input type="date" id="7" placeholder="Tanggal Join">
+    <input type="text" id="8" placeholder="Stage">
+    <input type="text" id="9" placeholder="Task">
+    <p>Notes: link image ngmbil di akun X project<br>Klik kanan pada foto profil Project di X</p>
+    <div class="btn">
+      <button id="addList">Tambah</button>
+      <button id="close">Tutup</button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="assets/js/index.js"></script>
+  <script>feather.replace();</script>
+</body>
+</html>
